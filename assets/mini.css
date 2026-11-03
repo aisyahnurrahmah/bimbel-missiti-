@@ -1,0 +1,831 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+/* Header fiks */
+header{
+    position: fixed;
+    top: 15px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    z-index: 1000;  /*agar navigasi selalu diatas gambar yang lain  */
+}
+/* footer fiks */
+.site-footer {
+    background-color: #176626; /* Warna hijau khas Bimbel */
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px; /* Jarak dari konten card di atasnya */
+    font-family: system-ui, -apple-system, sans-serif;
+}
+.site-footer p {
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-title {
+    color: #F4E600; /* Warna kuning emas untuk judul kolom */
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0;
+    color: #f0f0f0;
+    text-align: justify;
+    
+}
+.footer-column ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-column a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 12px 30px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+}
+.footer-column a:hover{
+    color: #F4E600;
+    text-decoration:underline ;
+}
+
+/*logo,toggle menu, dan navbar */
+.logo{
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    outline: none;
+    user-select: none;
+}
+
+.logo:hover{transform: scale(1.05);}
+
+.img-rounded{
+    pointer-events: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+
+#container-menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.navbar{
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0px 2px 10px rgb(0, 0, 0, 0.5);
+}
+
+.nav-menu{
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+.nav-menu li{
+    margin: 0;
+}
+.nav-menu a{
+    color: black;
+    padding: 12px 30px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+.nav-menu a:hover,
+.nav-menu a:active,
+.nav-menu a.active{
+    background-color: #176626;
+    color: white;
+}
+
+.btn-contact{
+    background-color: #F4E600;
+    color: black;
+    padding: 10px 45px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.btn-contact:hover{
+    background-color:#176626 ;
+    color: rgb(247, 247, 208);
+}
+
+/* slide foto home */
+.container-slider{
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.slide{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.foto-slide{
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+.foto-slide img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+/* tombol panah foto slider home */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.btnprev { left: 15px; }
+.btnnext { right: 15px; }
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+/* Halaman HOME */
+
+.home-wrap {
+    padding-top: 100px;
+    flex: 1;
+}
+
+.home-welcome {
+    text-align: center;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.home-welcome h1 {
+    font-size: 28px;
+    color: #176626;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.home-welcome p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #F4E600;
+    color: #000000;
+    padding: 12px 50px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #176626;
+    color: #ffffff;
+}
+
+.section-container {
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #176626;
+    margin-bottom: 30px;
+    
+}
+
+.intro-section {
+    background-color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.intro-section h2 {
+    color: #176626;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* grid mengapa milih missiti  */
+.fitur-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.fitur-card {
+    background-color: #ffffff;
+    padding: 25px 18px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fitur-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.fitur-card h3 {
+    font-size: 16px;
+    color: #176626;
+    margin-bottom: 8px;
+}
+
+.fitur-card p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+.fitur-card:hover{
+    transform: translateY(-3px);
+    border-color: #176626;
+}
+
+
+/* halaman contact */
+.maincontact{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 140px; /* Jarak agar tidak tertutup header fixed */
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    box-sizing: border-box;
+}
+/* kontak info  */
+.contactbox{
+   flex: 1;
+    background-color: transparent; /* Hapus kotak putih biar kosong*/
+    padding: 0;
+    box-shadow: none;
+    width: auto;
+}
+.info-contact{
+    width: 100%;
+}
+.info-contact h2{
+    font-size: 26px;
+    font-weight: bold;
+    color: #176626; /* Hijau tema bimbel */
+    line-height: 1.3;
+    margin-bottom: 12px;
+    
+}
+.desc-contact{
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.info-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+.info-item .icon{
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 2px;
+}
+.info-item strong{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+.info-item p, .info-item a{
+    margin: 0;
+    color: black;
+    text-decoration: none;
+}
+.info-item a:hover{
+    color: #176626;
+    text-decoration: underline;
+}
+/* form pendaftaran di contact us */
+.formbox{
+    flex: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    max-width: 460px;
+    background-color: white; 
+    border-radius: 20px;
+    padding: 35px;
+   
+}
+#formlogin{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-group label{
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-group input[type="text"], .form-group input[type="email"], .form-group select{
+    background-color: #f0f4f7;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bcc3fc;
+    border-radius: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline-color: #176626;
+}
+.radio-gender{
+    display: flex;
+    gap: 20px;
+    padding: 8px 12px;
+}
+.radio-gender label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+#btnlogin {
+    background-color: #F4E600;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#btnlogin:hover {
+    background-color: #176626;
+    color: white;
+}
+
+/* halaman program */
+.buttonprogram{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    padding-top: 140px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;   
+    scroll-padding: 0 15px;
+    -webkit-overflow-scrolling: touch;
+} 
+.buttonprogram::-webkit-scrollbar{
+    display: none;
+}
+.same-button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #F4E600;
+    color: black;
+    padding: 10px 24px;
+    border-radius: 10px;
+    border:1px solid #F4E600 ;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.05);
+    min-width: 200px;
+    white-space: nowrap;
+}
+.same-button:hover{
+    background-color: #176626;
+    color: #ffffff;
+    transform: translateY(-3px);
+    border:1px solid #176626;
+}
+.same-button:active{
+    background-color: #176626;
+    color: #ffffff;
+    border:1px solid #176626;
+}
+.same-button.active{
+    background-color: #176626; 
+    color: white; 
+    border-color: #176626;
+}
+/* program kegiatan nya sesuai jenjang */
+.program-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+.card-program{
+    background-color: white;
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.05);
+    width: 100%;
+    border: 1px solid #176626; 
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+.card-program:hover{
+    background-color: #bcc3fc;
+    border: #f0f8ff;
+}
+.card-program:active{
+    background-color: #bcc3fc;
+    border: #f0f8ff;   
+}
+.card-img{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+}
+.card-img img{
+    object-fit: cover;
+    height: 100%;
+    width: 250px;
+    margin-top: 10px;
+}
+.card-body{
+    padding: 16px;
+}
+.card-body h3{
+    color: #176626;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.card-body p{
+    color: black;
+    font-size: 14px;
+    line-height: 1.0;
+    margin-bottom: 15px;
+    
+}
+.card-include{
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+}
+.card-include li{
+    margin-bottom:5px;
+}
+
+/* halaman about */
+.main-about{
+    padding-top: 20px;
+}
+.jdl-utama{
+    text-align: center;
+    margin: 0 auto 50px auto;
+    padding-bottom: 20px;
+}
+
+.jdl-utama h2 {
+    font-size: 28px;
+    color: #176626;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+.jdl-utama p{
+    text-align: center;
+    color: black;
+}
+.about-us{
+    text-align: center;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow:0 4px 15px rgb(0, 0, 0, 0.05); 
+}
+.about-us p{
+    padding-top: 20px;
+    text-align: justify;
+}
+.about-us h2 {
+    font-size: 28px;
+    color: #176626;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+.judul-poin{
+    font-size: 28px;
+    color: #176626;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    text-align: center;
+}
+.poin-plus{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px 20px;
+    justify-content: center;
+}
+
+.poin-1{
+    background-color: #ffffff;
+    padding: 25px 18px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.icon-1{
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+   
+.poin-1 h3 {
+    font-size: 16px;
+    color: #176626;
+}
+
+.poin-1 p {
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.poin-1:hover{
+    transform: translateY(-3px);
+    border-color: #176626;
+}
+
+@media (max-width: 768px) {
+    /* NAVBAR & TOGGLE MENU */
+    .navbar {
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        padding: 0px;
+        
+    }
+    .img-rounded{
+        width: 50px;
+        height: 50px;
+    }
+    #container-menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        background-color: white;
+        box-shadow: 0 4px 10px rgb(0, 0, 0, 0.05);
+        border-radius: 20px;
+        gap: 0;
+        padding: 15px 0;
+    }
+    .nav-menu{
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav-menu li{
+        flex-direction: column;
+        flex-direction: column;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .btn-contact{
+        background-color: white;
+        padding: 12px 30px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    #container-menu.active{
+        display: flex;
+    }
+    .slide img{
+        height: 300px;
+    }
+    .nav-btn{
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    /* HALAMAN HOME BELUM FIKS*/
+    .home-wrap {
+        padding-top: 80px;
+    }
+
+    .home-welcome h1 {
+        font-size: 22px;
+    }
+
+    .home-welcome p {
+        font-size: 13px;
+    }
+
+    .fitur-card {
+        padding: 18px 12px;
+    }
+    .fitur-grid {
+        grid-template-columns: repeat(2, 1fr); /* Membuat susunan 2x2 */
+        gap: 12px;
+    }
+
+    /* halaman contact */
+    .maincontact{
+        padding-top: 100px;
+        flex-direction: column-reverse; /* form diatas contact info dibawah */
+        gap: 35px;
+    }
+    .formbox{
+        max-width: 100%;
+        width: 100%;
+    }
+    .contactbox{
+        text-align: left;
+    }
+    /*  program */
+    .same-button{
+        flex: 0 0 auto;
+        white-space: nowrap;
+        min-width: 120px;
+        text-align: center;
+
+    }
+    .program-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        padding: 0 10px;
+        max-width: 80%;
+
+    }
+    .card-program{width: 100%;}
+    .card-img{height: 140px;}
+    .card-body h3{font-size: 16px;}
+    .card-body p{
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    .buttonprogram{
+        display: flex;
+        padding-top: 60px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+    .buttonprogram::-webkit-scrollbar{
+        display: none;
+    }
+
+    /* Page About */
+    .poin-plus{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        padding: 0 10px;
+        margin: 0 auto;
+        max-width: 90%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    .poin-1{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .poin-1 h3{ font-size: 16px;}
+    .poin-1 p{
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+
+    /* footer */
+    
+    .footer-container {
+        
+        flex-direction: column;
+        gap: 25px;
+        text-align: left;
+        padding: 0 20px;
+    }
+    .site-footer{
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        margin-top: 25px;
+    }
+    .footer-title {
+        font-size: 15px; 
+        margin-bottom: 6px;
+    }
+
+    .footer-column p {
+        font-size: 13px; 
+        line-height: 1.4;
+        margin: 3px 0;
+        text-align: justify;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 10px;
+        font-size: 11px;
+    }
+}
